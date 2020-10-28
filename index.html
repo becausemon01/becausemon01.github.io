@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Topol.io plugin example</title>
+      
+    </head>
+    <body>
+        <div id="app" style="position: absolute; width: 100%; height: 100%;"></div>
+    
+
+    <script>
+        // Plugin Settings
+        const TOPOL_OPTIONS = {
+            id: "#app",
+            authorize: {
+                apiKey: "odo0tWDv2YZbfVOVjkB836VmPzGMGL7tv1uZHAz8NGz8AIAaXcTsGVWu49NL",
+                userId: "2",
+            },
+            language: "en",
+            templateId: 1, // Not required, if not provided the editor will wait for the "TopolPlugin.load(json)" function call to load the template
+            title: "My template builder", // Title shown on the top of the main menu
+            removeTopBar: true, // Hides the top bar of the email editor
+            topBarOptions: [
+              "undoRedo", 
+              "changePreview", 
+              "previewSize", 
+              "previewTestMail",
+              "saveAndClose",
+              "save"
+            ], // Displays given elements in top bar 
+            mainMenuAlign: "right", // Main menu on right or left side
+            hideSettingsTab: true, // Hides settings tab
+            disableAlerts: true, // Disables alerts
+            light: false, // set the editor theme to be light
+            customFileManager: true, // Sets the build in file manager to be disabled and change to call the callbacks provided below
+            mergeTags: [
+              { name: 'Merge tags', // Group name 
+                items: [ 
+                  { value: "*|FIRST_NAME|*", // Text to be inserted
+                    text: "First name", // Shown text in the menu
+                    label: "Customer's first name" // Shown description title in the menu
+                  },
+                  { value: "*|LAST_NAME|*",
+                    text: "Last name",
+                    label: "Customer's last name"
+                  }
+                ]},{
+                name: 'Special links', // Group name 
+                items: [ 
+                  { value: "<a href=\"*|UNSUBSCRIBE_LINK|*\">Unsubscribe</a>",
+                    text: "Unsubscribe",
+                    label: "Unsubscribe link"
+                  },
+                  { value: "<a href=\"*|WEB_VERSION_LINK|*\">Web version</a>",
+                    text: "Web version",
+                    label: "Web version link"
+                  }
+                ]},{
+                name: 'Special content', // Group name 
+                items: [ 
+                  { value: "For more details, please visit our <a href=\"https://www.shop.shop\">e-shop</a>!",
+                    text: "Visit our site",
+                    label: "Call to action"
+                  }
+                ]
+              }
+            ],
+            googleFonts: [  // List of google fonts to load
+                'Roboto',
+                'K2D',
+                'Mali'
+            ],
+            fonts: [ // List of all font shown in select box
+                {
+                    'label': 'Roboto', // Label shown to user
+                    'style': 'Roboto, Tahoma, sans-serif' // CSS style applied with font selected
+                },
+                {
+                    'label': 'K2D',
+                    'style': 'K2D'
+                },
+                {
+                    'label': 'Mali',
+                    'style': 'Mali'
+                }
+            ],
+            savedBlocks: [
+              {
+                id: 1,
+                name: 'My saved block 001',
+                img: 'src to my img', // The editor shows only name or img (img if both set)
+                definition: [{ "tagName": "mj-section", "attributes": { "full-width": false, "padding": "9px 0px 9px 0px", "background-color": "#000000" }, "type": null, "children": [{ "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-social", "attributes": { "display": "facebook:url twitter:url google:url", "padding": "10px 10px 10px 30px", "text-mode": "false", "icon-size": "25px", "base-url": "https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/simplewhite/", "facebook-href": "https://www.facebook.com/PROFILE", "facebook-icon-color": "none", "facebook-alt": "Sdílet", "twitter-href": "https://www.twitter.com/PROFILE", "twitter-icon-color": "none", "twitter-alt": "", "google-href": "https://plus.google.com/PROFILE", "google-icon-color": "none", "google-alt": "", "instagram-icon-color": "none", "linkedin-icon-color": "none", "align": "left", "youtube-icon-color": "none", "youtube-alt": "", "youtube-icon": "https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/simplewhite/youtube.png", "youtube-href": "https://www.youtube.com", "containerWidth": 200 }, "uid": "H1lqIiX4lm" }], "uid": "SJ3I0XVx7" }, { "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-image", "attributes": { "src": "https://storage.googleapis.com/jan50/blackberrylogo.png", "padding": "19px 10px 10px 10px", "alt": "", "href": "", "containerWidth": 200, "width": 100, "widthPercent": 50 }, "uid": "rkEyL-HeQ" }], "uid": "r1e280m4xQ" }, { "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-spacer", "attributes": { "height": 15, "containerWidth": 200 }, "uid": "rJfqLiXEgm" }], "uid": "B1W380QVxX" }], "layout": 1, "backgroundColor": "", "backgroundImage": "", "paddingTop": 0, "paddingBottom": 0, "paddingLeft": 0, "paddingRight": 0, "uid": "rkqIjQNe7" }]
+              }
+            ],
+            premadeBlocks: {
+              'headers': [
+                {
+                    'img': 'url', // Image url
+                    'definition': [{"tagName":"mj-section","attributes":{"full-width":false,"padding":"9px 0px 9px 0px","background-color":"#000000"},"type":null,"children":[{"tagName":"mj-column","attributes":{"width":"33.333333%","vertical-align":"top"},"children":[{"tagName":"mj-social","attributes":{"display":"facebook:url twitter:url google:url","padding":"10px 10px 10px 30px","text-mode":"false","icon-size":"25px","base-url":"https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/simplewhite/","facebook-href":"https://www.facebook.com/PROFILE","facebook-icon-color":"none","facebook-alt":"Sdílet","twitter-href":"https://www.twitter.com/PROFILE","twitter-icon-color":"none","twitter-alt":"","google-href":"https://plus.google.com/PROFILE","google-icon-color":"none","google-alt":"","instagram-icon-color":"none","linkedin-icon-color":"none","align":"left","youtube-icon-color":"none","youtube-alt":"","youtube-icon":"https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/simplewhite/youtube.png","youtube-href":"https://www.youtube.com","containerWidth":200},"uid":"H1lqIiX4lm"}],"uid":"SJ3I0XVx7"},{"tagName":"mj-column","attributes":{"width":"33.333333%","vertical-align":"top"},"children":[{"tagName":"mj-image","attributes":{"src":"https://storage.googleapis.com/jan50/blackberrylogo.png","padding":"19px 10px 10px 10px","alt":"","href":"","containerWidth":200,"width":100,"widthPercent":50},"uid":"rkEyL-HeQ"}],"uid":"r1e280m4xQ"},{"tagName":"mj-column","attributes":{"width":"33.333333%","vertical-align":"top"},"children":[{"tagName":"mj-spacer","attributes":{"height":15,"containerWidth":200},"uid":"rJfqLiXEgm"}],"uid":"B1W380QVxX"}],"layout":1,"backgroundColor":"","backgroundImage":"","paddingTop":0,"paddingBottom":0,"paddingLeft":0,"paddingRight":0,"uid":"rkqIjQNe7"} // MJML JSON
+                    ]
+                }]
+            },
+            sendTestEmail: true, // Hides the send test email input & button if false
+            // URL or Callback when clicked on Save & close
+            callbacks: {
+                onSaveAndClose: function(json, html) {
+                    // HTML of the email
+                    console.log(html);
+                    // JSON object of the email
+                    console.log(json); 
+                    // Implement your own close callback
+                    // Data variable contains the response data of the save request
+                },
+                onSave: function(json, html) {
+                    // HTML of the email
+                    console.log(html);
+                    // JSON object of the email
+                    console.log(json);
+                },
+                onTestSend: function(email, json, html) {
+                    // HTML of the email
+                    console.log(html);
+                    // JSON object of the email
+                    console.log(json);
+                    // Email of the recipient
+                    console.log(email);
+                    // Callback when send test email button is clicked
+                },
+                onOpenFileManager: function() {
+                    // Implement your own file manager open callback
+                },
+                onAutoSave(json) {
+                    // Called when the editor decides that it needs an autosave. Mostly when the user makes a change and does not save it immediately.
+                    console.log(json);
+                },
+                onBlockSave(json) {
+                  var name = window.prompt('Enter block name:')
+                    if (name !== null) {
+                        console.log('saving block', json)
+                    }
+                },
+                onBlockRemove(id) {
+                    if (window.confirm('Are you sure?')) {
+                        console.log('removing block', id)
+                    }
+                },
+                onBlockEdit(id) {
+                    var name = window.prompt('Block name:', 'My block 001')
+                    if (name !== null) {
+                        console.log('saving edited block', id)
+                    }
+                }
+            },
+            api: {
+                IMAGE_UPLOAD: "/images/upload",
+                // Your own endpoint for uploading images
+                FOLDERS: "/images/folder-contents"
+                // Your own endpoint for getting contents of current folder
+            }
+        };
+    </script>
+    <script src="https://d5aoblv5p04cg.cloudfront.net/editor-2/loader/build.js" type="text/javascript"></script>
+    <script>
+        // Plugin start
+        TopolPlugin.init(TOPOL_OPTIONS);
+    TopolPlugin.load('json-template'); // To load JSON format use this load function with the JSON template. STRING FORMAT
+    TopolPlugin.save(); // To force the save -> the onSave callback will be called with the JSON and HTML of the template
+    TopolPlugin.togglePreview(); // Toggles the mode of Preview
+    TopolPlugin.chooseFile('http://url.to/picture.png'); // When the onOpenFileManager is called, it is awaiting to call this function with the url of the chosen file.
+
+    // Sets the saved blocks - this should be called with updated list of saved blocks after all actions: onBlockSave, onBlockRemove, onBlockEdit to update the editor with the updated information.
+    TopolPlugin.setSavedBlocks([
+            {
+                'id': 11,
+                'name': 'My saved block - by setSavedBlocks',
+                'definition': [{ "tagName": "mj-section", "attributes": { "full-width": false, "padding": "9px 0px 9px 0px", "background-color": "#000000" }, "type": null, "children": [{ "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-social", "attributes": { "display": "facebook:url twitter:url google:url", "padding": "10px 10px 10px 30px", "text-mode": "false", "icon-size": "25px", "base-url": "https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/simplewhite/", "facebook-href": "https://www.facebook.com/PROFILE", "facebook-icon-color": "none", "facebook-alt": "Sdílet", "twitter-href": "https://www.twitter.com/PROFILE", "twitter-icon-color": "none", "twitter-alt": "", "google-href": "https://plus.google.com/PROFILE", "google-icon-color": "none", "google-alt": "", "instagram-icon-color": "none", "linkedin-icon-color": "none", "align": "left", "youtube-icon-color": "none", "youtube-alt": "", "youtube-icon": "https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/simplewhite/youtube.png", "youtube-href": "https://www.youtube.com", "containerWidth": 200 }, "uid": "H1lqIiX4lm" }], "uid": "SJ3I0XVx7" }, { "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-image", "attributes": { "src": "https://storage.googleapis.com/jan50/blackberrylogo.png", "padding": "19px 10px 10px 10px", "alt": "", "href": "", "containerWidth": 200, "width": 100, "widthPercent": 50 }, "uid": "rkEyL-HeQ" }], "uid": "r1e280m4xQ" }, { "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-spacer", "attributes": { "height": 15, "containerWidth": 200 }, "uid": "rJfqLiXEgm" }], "uid": "B1W380QVxX" }], "layout": 1, "backgroundColor": "", "backgroundImage": "", "paddingTop": 0, "paddingBottom": 0, "paddingLeft": 0, "paddingRight": 0, "uid": "rkqIjQNe7" }]
+            },
+            {
+                'id': 12,
+                'img': 'https://d5aoblv5p04cg.cloudfront.net/editor/blocks/menu1.jpg',
+                'definition': [{ "tagName": "mj-section", "attributes": { "full-width": false, "padding": "9px 0px 9px 0px", "background-color": "#000000" }, "type": null, "children": [{ "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-social", "attributes": { "display": "facebook:url twitter:url google:url", "padding": "10px 10px 10px 30px", "text-mode": "false", "icon-size": "25px", "base-url": "https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/simplewhite/", "facebook-href": "https://www.facebook.com/PROFILE", "facebook-icon-color": "none", "facebook-alt": "Sdílet", "twitter-href": "https://www.twitter.com/PROFILE", "twitter-icon-color": "none", "twitter-alt": "", "google-href": "https://plus.google.com/PROFILE", "google-icon-color": "none", "google-alt": "", "instagram-icon-color": "none", "linkedin-icon-color": "none", "align": "left", "youtube-icon-color": "none", "youtube-alt": "", "youtube-icon": "https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/simplewhite/youtube.png", "youtube-href": "https://www.youtube.com", "containerWidth": 200 }, "uid": "H1lqIiX4lm" }], "uid": "SJ3I0XVx7" }, { "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-image", "attributes": { "src": "https://storage.googleapis.com/jan50/blackberrylogo.png", "padding": "19px 10px 10px 10px", "alt": "", "href": "", "containerWidth": 200, "width": 100, "widthPercent": 50 }, "uid": "rkEyL-HeQ" }], "uid": "r1e280m4xQ" }, { "tagName": "mj-column", "attributes": { "width": "33.333333%", "vertical-align": "top" }, "children": [{ "tagName": "mj-spacer", "attributes": { "height": 15, "containerWidth": 200 }, "uid": "rJfqLiXEgm" }], "uid": "B1W380QVxX" }], "layout": 1, "backgroundColor": "", "backgroundImage": "", "paddingTop": 0, "paddingBottom": 0, "paddingLeft": 0, "paddingRight": 0, "uid": "rkqIjQNe7" }]
+            }
+        ])
+    </script>
+
+</body>
+</html>
