@@ -1,0 +1,417 @@
+{
+    "tagName": "mj-global-style",
+    "attributes": {
+      "h1:color": "#000",
+      "h1:font-family": "Helvetica, sans-serif",
+      "h2:color": "#000",
+      "h2:font-family": "Ubuntu, Helvetica, Arial, sans-serif",
+      "h3:color": "#000",
+      "h3:font-family": "Ubuntu, Helvetica, Arial, sans-serif",
+      ":color": "#000",
+      ":font-family": "Ubuntu, Helvetica, Arial, sans-serif",
+      ":line-height": "1.5",
+      "a:color": "#24bfbc",
+      "button:background-color": "#e85034",
+      "containerWidth": 600,
+      "fonts": "Helvetica,sans-serif,Ubuntu,Arial",
+      "mj-text": {
+        "line-height": 1.5,
+        "font-size": 14,
+        "font-family": "\"Lato\", \"Tahoma\", sans-serif"
+      },
+      "mj-button": [
+        
+      ]
+    },
+    "children": [
+      {
+        "tagName": "mj-container",
+        "attributes": {
+          "background-color": "#FFFFFF",
+          "containerWidth": 600
+        },
+        "children": [
+          {
+            "tagName": "mj-section",
+            "attributes": {
+              "full-width": "full-width",
+              "padding": "0px 0px 0px 0px",
+              "background-color": "#49a6e8"
+            },
+            "children": [
+              {
+                "tagName": "mj-column",
+                "attributes": {
+                  "width": "100%"
+                },
+                "children": [
+                  {
+                    "tagName": "mj-spacer",
+                    "attributes": {
+                      "height": 50,
+                      "containerWidth": 600
+                    },
+                    "uid": "H19_XYUMb"
+                  },
+                  {
+                    "tagName": "mj-image",
+                    "attributes": {
+                      "src": "https://topolio.s3-eu-west-1.amazonaws.com/uploads/5939020faa057/1496908636.jpg",
+                      "padding": "0px 0px 0px 0px",
+                      "alt": null,
+                      "href": null,
+                      "containerWidth": 600,
+                      "width": 72,
+                      "widthPercent": 12
+                    },
+                    "uid": "HJsLQKUf-"
+                  },
+                  {
+                    "tagName": "mj-text",
+                    "attributes": {
+                      "align": "center",
+                      "font-size": 14,
+                      "padding": "0px 20px 0px 20px",
+                      "color": "#FFFFFF",
+                      "containerWidth": 600,
+                      "font-family": "\"Lato\", \"Tahoma\", sans-serif"
+                    },
+                    "content": "<h1>Our new App is Out!</h1>",
+                    "uid": "HkwUzF8zW"
+                  },
+                  {
+                    "tagName": "mj-button",
+                    "attributes": {
+                      "align": "center",
+                      "background-color": "#275877",
+                      "color": "#fff",
+                      "border-radius": "24px",
+                      "font-size": 18,
+                      "href": "https://google.com",
+                      "font-family": "Ubuntu, Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif",
+                      "containerWidth": 600,
+                      "padding": "1px 0 1px 0",
+                      "margin": "0 0px 0 0px"
+                    },
+                    "content": "DOWNLOAD NOW",
+                    "uid": "rJPKfFIG-"
+                  },
+                  {
+                    "tagName": "mj-spacer",
+                    "attributes": {
+                      "height": 50,
+                      "containerWidth": 600
+                    },
+                    "uid": "BySYQKUzW"
+                  },
+                  {
+                    "tagName": "mj-image",
+                    "attributes": {
+                      "src": "https://topolio.s3-eu-west-1.amazonaws.com/uploads/5939020faa057/1496908846.jpg",
+                      "padding": "0px 0px 0px 0px",
+                      "alt": null,
+                      "href": null,
+                      "containerWidth": 600,
+                      "width": 198,
+                      "widthPercent": 33
+                    },
+                    "uid": "Hkmf4KIMb"
+                  }
+                ]
+              }
+            ],
+            "layout": 1,
+            "backgroundColor": null,
+            "backgroundImage": null,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "uid": "Sy8mzt8Gb"
+          },
+          {
+            "tagName": "mj-section",
+            "attributes": {
+              "full-width": "full-width",
+              "padding": "35px 0px 35px 0px"
+            },
+            "children": [
+              {
+                "tagName": "mj-column",
+                "attributes": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "tagName": "mj-image",
+                    "attributes": {
+                      "src": "https://topolio.s3-eu-west-1.amazonaws.com/uploads/5939020faa057/1496908947.jpg",
+                      "padding": "0px 0px 0px 0px",
+                      "alt": null,
+                      "href": null,
+                      "containerWidth": 300,
+                      "width": 108,
+                      "widthPercent": 36
+                    },
+                    "uid": "HJl_ZrtIGZ"
+                  }
+                ]
+              },
+              {
+                "tagName": "mj-column",
+                "attributes": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "tagName": "mj-spacer",
+                    "attributes": {
+                      "height": 50,
+                      "containerWidth": 300
+                    },
+                    "uid": "HJWOZHYLzb"
+                  },
+                  {
+                    "tagName": "mj-text",
+                    "attributes": {
+                      "align": "left",
+                      "font-size": 14,
+                      "padding": "0px 20px 0px 20px",
+                      "containerWidth": 300,
+                      "font-family": "\"Lato\", \"Tahoma\", sans-serif"
+                    },
+                    "content": "<h2>Cutomized Alerts</h2>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n\n<p></p>",
+                    "uid": "BkfOWBKLGW"
+                  }
+                ]
+              }
+            ],
+            "layout": 1,
+            "backgroundColor": null,
+            "backgroundImage": null,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "uid": "SydZHF8GW"
+          },
+          {
+            "tagName": "mj-section",
+            "attributes": {
+              "full-width": "full-width",
+              "padding": "37px 0px 37px 0px",
+              "background-color": "#59c4f4"
+            },
+            "children": [
+              {
+                "tagName": "mj-column",
+                "attributes": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "tagName": "mj-spacer",
+                    "attributes": {
+                      "height": 50,
+                      "containerWidth": 300
+                    },
+                    "uid": "rkNGrFIfW"
+                  },
+                  {
+                    "tagName": "mj-text",
+                    "attributes": {
+                      "align": "left",
+                      "font-size": 14,
+                      "padding": "0px 20px 0px 20px",
+                      "containerWidth": 300,
+                      "font-family": "\"Lato\", \"Tahoma\", sans-serif",
+                      "color": "#FFFFFF"
+                    },
+                    "content": "<h2><span style=\"color:#ffffff;\">Great Recommendations</span></h2>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n\n<p></p>",
+                    "uid": "SJgzStIzb"
+                  }
+                ]
+              },
+              {
+                "tagName": "mj-column",
+                "attributes": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "tagName": "mj-image",
+                    "attributes": {
+                      "src": "https://topolio.s3-eu-west-1.amazonaws.com/uploads/5939020faa057/1496908947.jpg",
+                      "padding": "0px 0px 0px 0px",
+                      "alt": null,
+                      "href": null,
+                      "containerWidth": 300,
+                      "width": 108,
+                      "widthPercent": 36
+                    },
+                    "uid": "rkp-HYIGb"
+                  }
+                ]
+              }
+            ],
+            "layout": 1,
+            "backgroundColor": null,
+            "backgroundImage": null,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "uid": "S17rVFLfb"
+          },
+          {
+            "tagName": "mj-section",
+            "attributes": {
+              "full-width": "full-width",
+              "padding": "9px 0px 9px 0px"
+            },
+            "children": [
+              {
+                "tagName": "mj-column",
+                "attributes": {
+                  "width": "100%"
+                },
+                "children": [
+                  {
+                    "tagName": "mj-button",
+                    "attributes": {
+                      "align": "center",
+                      "background-color": "#2ecc71",
+                      "color": "#fff",
+                      "border-radius": "24px",
+                      "font-size": 18,
+                      "href": "https://google.com",
+                      "font-family": "Ubuntu, Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif",
+                      "containerWidth": 600,
+                      "padding": "42px 0 42px 0",
+                      "margin": "0 0px 0 0px"
+                    },
+                    "content": "GET OUR AWESOME APP",
+                    "uid": "H1OvHKUf-"
+                  },
+                  {
+                    "tagName": "mj-divider",
+                    "attributes": {
+                      "border-color": "#868686",
+                      "border-style": "dotted",
+                      "border-width": "1px",
+                      "padding-top": 10,
+                      "padding-right": 54,
+                      "containerWidth": 600,
+                      "padding-bottom": 10,
+                      "padding-left": 54
+                    },
+                    "uid": "Hk3KSFUMb"
+                  },
+                  {
+                    "tagName": "mj-spacer",
+                    "attributes": {
+                      "height": 29,
+                      "containerWidth": 600
+                    },
+                    "uid": "HkcorY8Mb"
+                  }
+                ]
+              }
+            ],
+            "layout": 1,
+            "backgroundColor": null,
+            "backgroundImage": null,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "uid": "S1EvHtLfW"
+          },
+          {
+            "tagName": "mj-section",
+            "attributes": {
+              "full-width": "full-width",
+              "padding": "0px 0px 0px 0px"
+            },
+            "children": [
+              {
+                "tagName": "mj-column",
+                "attributes": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "tagName": "mj-text",
+                    "attributes": {
+                      "align": "left",
+                      "font-size": 14,
+                      "padding": "0px 20px 0px 20px",
+                      "containerWidth": 300,
+                      "color": "#949494",
+                      "font-family": "\"Lato\", \"Tahoma\", sans-serif"
+                    },
+                    "content": "<p><span style=\"font-size:12px;\">Copyright &copy; 2017&nbsp;Topol.io, All rights reserved.&nbsp;<br />\nYou subscribed to our newsletter via our website, topol.io<br />\n&nbsp;<br />\n<a draggable=\"false\" href=\"http://*|UNSUB|*\" style=\"color:#3498db;\">Unsubscribe from this list</a></span></p>",
+                    "uid": "By2Fj_WfZ"
+                  }
+                ],
+                "uid": "ByDQL1FbzZ"
+              },
+              {
+                "tagName": "mj-column",
+                "attributes": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "tagName": "mj-social",
+                    "attributes": {
+                      "display": "facebook:url twitter:url google:url",
+                      "text-mode": false,
+                      "icon-size": "35px",
+                      "base-url": "https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/outlined/",
+                      "facebook-href": "https://www.facebook.com/PROFILE",
+                      "facebook-icon-color": "none",
+                      "facebook-alt": "Sdílet",
+                      "twitter-href": "https://www.twitter.com/PROFILE",
+                      "twitter-icon-color": "none",
+                      "twitter-alt": null,
+                      "google-href": "https://plus.google.com/PROFILE",
+                      "google-icon-color": "none",
+                      "google-alt": null,
+                      "align": "right",
+                      "youtube-icon": "https://s3-eu-west-1.amazonaws.com/ecomail-assets/editor/social-icos/outlined/youtube.png",
+                      "containerWidth": 300
+                    },
+                    "uid": "S1yhzK8MZ"
+                  }
+                ],
+                "uid": "ByDQL1FbzZ"
+              }
+            ],
+            "layout": 1,
+            "backgroundColor": null,
+            "backgroundImage": null,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "uid": "rkYKjdZMb"
+          }
+        ]
+      }
+    ],
+    "style": {
+      "h1": {
+        "font-family": "\"Cabin\", sans-serif",
+        "color": "#FFFFFF",
+        "font-size": "32px"
+      },
+      "h2": {
+        "color": "#757575"
+      }
+    },
+    "fonts": [
+      "\"Lato\", \"Tahoma\", sans-serif",
+      "\"Cabin\", sans-serif"
+    ]
+  }
