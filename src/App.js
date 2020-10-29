@@ -101,6 +101,8 @@ function App() {
           }
     ])
 
+    TopolPlugin.destroy()
+
   },[TOPOL_OPTIONS])
 
 
