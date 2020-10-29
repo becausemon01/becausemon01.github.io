@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/deploy-github/static/css/main.fad9f5e2.chunk.css",
-    "main.js": "/deploy-github/static/js/main.82285eaa.chunk.js",
-    "main.js.map": "/deploy-github/static/js/main.82285eaa.chunk.js.map",
-    "runtime-main.js": "/deploy-github/static/js/runtime-main.a535f3dc.js",
-    "runtime-main.js.map": "/deploy-github/static/js/runtime-main.a535f3dc.js.map",
-    "static/js/2.d28ddc98.chunk.js": "/deploy-github/static/js/2.d28ddc98.chunk.js",
-    "static/js/2.d28ddc98.chunk.js.map": "/deploy-github/static/js/2.d28ddc98.chunk.js.map",
-    "index.html": "/deploy-github/index.html",
-    "precache-manifest.dcc7b186887b6e11da738a5e75a2062b.js": "/deploy-github/precache-manifest.dcc7b186887b6e11da738a5e75a2062b.js",
-    "service-worker.js": "/deploy-github/service-worker.js",
-    "static/css/main.fad9f5e2.chunk.css.map": "/deploy-github/static/css/main.fad9f5e2.chunk.css.map",
-    "static/js/2.d28ddc98.chunk.js.LICENSE.txt": "/deploy-github/static/js/2.d28ddc98.chunk.js.LICENSE.txt"
+    "main.css": "/becausemon01.github.io/static/css/main.fad9f5e2.chunk.css",
+    "main.js": "/becausemon01.github.io/static/js/main.079bfba1.chunk.js",
+    "main.js.map": "/becausemon01.github.io/static/js/main.079bfba1.chunk.js.map",
+    "runtime-main.js": "/becausemon01.github.io/static/js/runtime-main.65e1c63e.js",
+    "runtime-main.js.map": "/becausemon01.github.io/static/js/runtime-main.65e1c63e.js.map",
+    "static/js/2.d28ddc98.chunk.js": "/becausemon01.github.io/static/js/2.d28ddc98.chunk.js",
+    "static/js/2.d28ddc98.chunk.js.map": "/becausemon01.github.io/static/js/2.d28ddc98.chunk.js.map",
+    "index.html": "/becausemon01.github.io/index.html",
+    "precache-manifest.67f2a4267223a937eeba03ae6a405eee.js": "/becausemon01.github.io/precache-manifest.67f2a4267223a937eeba03ae6a405eee.js",
+    "service-worker.js": "/becausemon01.github.io/service-worker.js",
+    "static/css/main.fad9f5e2.chunk.css.map": "/becausemon01.github.io/static/css/main.fad9f5e2.chunk.css.map",
+    "static/js/2.d28ddc98.chunk.js.LICENSE.txt": "/becausemon01.github.io/static/js/2.d28ddc98.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a535f3dc.js",
+    "static/js/runtime-main.65e1c63e.js",
     "static/js/2.d28ddc98.chunk.js",
     "static/css/main.fad9f5e2.chunk.css",
-    "static/js/main.82285eaa.chunk.js"
+    "static/js/main.079bfba1.chunk.js"
   ]
 }
