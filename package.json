@@ -1,8 +1,8 @@
 {
-  "name": "test",
-  "version": "0.1.0",
+  "name": "becausemon01.github.io",
+  "version": "0.1.1",
   "private": true,
-  "homepage": "https://becausemon01.github.io/",
+  "homepage": "https://becausemon01.github.io/becausemon01.github.io",
   "dependencies": {
     "@antscorp/charts": "0.0.7",
     "@testing-library/jest-dom": "^4.2.4",
